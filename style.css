@@ -1,0 +1,153 @@
+/* ========== CSS VARIABLES (Requirement) ========== */
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --bg-color: #f4f6f8;
+    --text-color: #333;
+}
+
+/* ========== SMOOTH SCROLLING (Requirement) ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== GLOBAL STYLES (Mobile First) ========== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ========== SIDE NAVIGATION (Requirement) ========== */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: var(--primary-color);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Hover state (Requirement) */
+nav a:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+/* ========== PAGE CONTENT OFFSET ========== */
+header, section, footer {
+    margin-left: 200px;
+    padding: 40px 20px;
+}
+
+/* ========== HERO SECTION (Requirement) ========== */
+#hero {
+    height: 100vh;
+    background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+    color: white;
+
+    /* Flexbox center (Requirement) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero .btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* ========== SECTION HEADINGS ========== */
+section h2 {
+    color: var(--primary-color);
+}
+
+/* ========== FORM STYLING (Requirement) ========== */
+form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Focus state (Requirement) */
+form input:focus,
+form textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+/* Submit button aesthetic (Requirement) */
+form button {
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--accent-color);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* ========== RESPONSIVENESS (Requirement) ========== */
+@media (max-width: 768px) {
+    nav {
+        position: relative;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    header, section, footer {
+        margin-left: 0;
+    }
+
+    /* Form inputs stack vertically (already column, reinforced) */
+    form {
+        width: 100%;
+    }
+}
